@@ -1,0 +1,348 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.verification-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Left Side - Welcome Section */
+.welcome-section {
+    flex: 1;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.pexels.com/photos/1007025/pexels-photo-1007025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: bold;
+    color: #1abc9c;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.welcome-title {
+    font-size: 36px;
+    font-weight: 180;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.welcome-subtitle {
+    font-size: 20px;
+    color: #1abc9c;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.welcome-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.security-features {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.security-features li {
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    opacity: 0.9;
+}
+
+.security-features li::before {
+    content: '🔐';
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+}
+
+.decorative-elements {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgba(26, 188, 156, 0.2);
+    border-radius: 50%;
+    top: 10%;
+    right: -100px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.decorative-elements::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(26, 188, 156, 0.3);
+    border-radius: 50%;
+    top: 50px;
+    left: 50px;
+    animation: float 4s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Right Side - OTP Verification Form */
+.verification-section {
+    flex: 1;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.verification-form-container {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    text-align: center;
+}
+
+.verification-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #1abc9c, #16a085);
+    border-radius: 20px 20px 0 0;
+}
+
+.form-header {
+    margin-bottom: 40px;
+}
+
+.verification-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 32px;
+    color: white;
+}
+
+.form-title {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.user-greeting {
+    font-size: 18px;
+    color: #1abc9c;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.form-subtitle {
+    color: #7f8c8d;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.email-info {
+    color: #2c3e50;
+    font-size: 14px;
+    background: #ecf0f1;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.otp-container {
+    margin: 30px 0;
+}
+
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.otp-input {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #e0e6ed;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.otp-input:focus {
+    outline: none;
+    border-color: #1abc9c;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.1);
+    transform: scale(1.05);
+}
+
+.otp-input.filled {
+    border-color: #1abc9c;
+    background: #e8f5e8;
+}
+
+.verify-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.verify-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(26, 188, 156, 0.3);
+}
+
+.verify-btn:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Success/Error Messages */
+.success-message, .error-message {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+    text-align: center;
+}
+
+.success-message {
+    background: #d5f5d3;
+    color: #27ae60;
+    border: 1px solid #a9d3ab;
+}
+
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Loading Animation */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .verification-container {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .welcome-section {
+        padding: 40px 20px;
+        min-height: 40vh;
+    }
+
+    .welcome-content {
+        max-width: 100%;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .welcome-title {
+        font-size: 28px;
+    }
+
+    .welcome-subtitle {
+        font-size: 18px;
+    }
+
+    .verification-section {
+        padding: 20px;
+    }
+
+    .verification-form-container {
+        padding: 30px 20px;
+    }
+
+    .otp-inputs {
+        gap: 10px;
+    }
+
+    .otp-input {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .decorative-elements {
+        display: none;
+    }
+}
