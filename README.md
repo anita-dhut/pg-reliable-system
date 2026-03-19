@@ -63,6 +63,13 @@ The system includes secure authentication with email OTP verification and role-b
 - **Tools:** XAMPP, VS Code  
 
 ---
+## ⚙️ How to Run the Project
+
+1. Install XAMPP and start Apache & MySQL
+2. Copy project folder to htdocs
+3. Import database file into phpMyAdmin
+4. Open browser and run:
+   http://localhost/pg-reliable-system
 
 ## 📸 Note
 This project was developed as an academic project to demonstrate full-stack web development skills, including authentication, database integration, and role-based access control.
