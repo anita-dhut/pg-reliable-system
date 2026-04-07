@@ -14,7 +14,7 @@
 ## 📸 Screenshots
 
 <!-- Replace with your actual screenshot filenames from the Screenshots/ folder -->
-![Home Page](Screenshots/home.png)
+![Home Page](Screenshots/Screenshot 2025-11-02 155254.png)
 ![User Dashboard](Screenshots/user-dashboard.png)
 ![Owner Dashboard](Screenshots/owner-dashboard.png)
 
